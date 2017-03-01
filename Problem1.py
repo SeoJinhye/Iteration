@@ -10,7 +10,7 @@ while(secret != guess):
 		print(guess, secret)
 		print("It needs to be smaller")
 		guess = int(input("guess a number"))
-	elif(secret < guess):
+	elif(secret > guess):
 		print(guess, secret)
 		print("It needs to be bigger")
 		guess = int(input("guess a number"))
