@@ -1,13 +1,18 @@
 import random
 secret = int(input("wirte the number"))
-guess = random.randint(1,1000)
+H = 1000
+L = 1
+guess = random.randint(L,H)
+
 while(secret != guess):
 	print(guess)
 	answer = raw_input("")
 	if(answer == "lower"):
-		guess = random.randint(1, guess)
+		H = guess
+		guess = random.randint(L, H)
 	if(answer == "bigger"):
-		guess = random.randint(guess,1000)	
+		L = guess
+		guess = random.randint(L,H)	
 print(guess)		
 print("You are correct! You won!")
 	
