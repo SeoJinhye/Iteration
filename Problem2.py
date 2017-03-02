@@ -4,11 +4,10 @@ guess = random.randint(1,1000)
 while(secret != guess):
 	print(guess)
 	answer = raw_input("")
-	if(answer == "big"):
-		#print(guess)
-		guess = random.randint(1,guess)
-	if(answer == "small"):
-		#print(guess)
-		guess = random.randint(guess,1000)
+	if(answer == "lower"):
+		guess = random.randint(1, guess)
+	if(answer == "bigger"):
+		guess = random.randint(guess,1000)	
+print(guess)		
 print("You are correct! You won!")
 	
