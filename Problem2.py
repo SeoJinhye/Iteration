@@ -8,11 +8,10 @@ while(secret != guess):
 	print(guess)
 	answer = raw_input("")
 	if(answer == "lower"):
-		H = guess
+		H = guess - 1
 		guess = random.randint(L, H)
 	if(answer == "bigger"):
-		L = guess
-		guess = random.randint(L,H)	
+		L = guess + 1
+		guess = random.randint(L , H)	
 print(guess)		
 print("You are correct! You won!")
-	
