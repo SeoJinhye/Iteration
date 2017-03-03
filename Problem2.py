@@ -1,17 +1,23 @@
 import random
-secret = int(input("wirte the number"))
 H = 1000
 L = 1
 guess = random.randint(L,H)
+print(guess)
+answer = raw_input("write 'lower' for lower number or 'bigger' for bigger number. \n type correct if it is the number.")
 
-while(secret != guess):
-	print(guess)
-	answer = raw_input("")
+while(answer != "correct"):
 	if(answer == "lower"):
 		H = guess - 1
 		guess = random.randint(L, H)
+		print(guess)
+		answer = raw_input("write 'lower' for lower number or 'bigger' for bigger number. \n type correct if it is the number.")
+		
 	if(answer == "bigger"):
 		L = guess + 1
-		guess = random.randint(L , H)	
-print(guess)		
-print("You are correct! You won!")
+		guess = random.randint(L , H)
+		print(guess)
+		answer = raw_input("write 'lower' for lower number or 'bigger' for bigger number. \n type correct if it is the number.")
+		
+
+if(answer == "correct"):
+	print("I am correct!")			
